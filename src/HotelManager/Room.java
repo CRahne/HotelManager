@@ -1,4 +1,6 @@
-package HotelManager;
+package HotelManager; // package declaration
+
+
 /**
  * The class for making a room on a floor
  * 
@@ -34,6 +36,12 @@ public class Room {
 		isFull = false;
 	}
 	
+	/**
+	 * Will check a guest into a room with the appropriate data
+	 * 
+	 * @param p_GuestName
+	 * @param GuessCount
+	 */
 	public void checkIntoRoom(String p_GuestName, int GuessCount) {
 		setGuestName(p_GuestName);
 		setGuestCount(GuessCount);
@@ -41,10 +49,9 @@ public class Room {
 		setFull(true);
 	}
 	
-	public void checkOuttaRoom() {
-		resetRoom();
-	}
-	
+	/**
+	 * Will reset room to default state
+	 */
 	public void resetRoom() {
 		setGuestName("UNFILLED");
 		setGuestCount(0);
