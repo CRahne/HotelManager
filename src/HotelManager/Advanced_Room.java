@@ -6,13 +6,13 @@ package HotelManager; // package declaration
  * 
  * @author Cole
  */
-public class Room {
+public class Advanced_Room {
 	/* CLASS VARIBLE DECLARATIONS */
 	// Booleans for the room's state
 	private boolean isFull, isEmpty;
 	
 	// The level number
-	private Level Level;
+	private Advanced_Level Level;
 	
 	// The Room Number
 	private int RoomNumber;
@@ -27,7 +27,7 @@ public class Room {
 	 * @param p_Level
 	 * @param p_RoomNumber
 	 */
-	public Room(Level p_Level, int p_RoomNumber) {
+	public Advanced_Room(Advanced_Level p_Level, int p_RoomNumber) {
 		Level = p_Level;
 		RoomNumber = p_RoomNumber;
 		GuestCount = 0;
@@ -113,7 +113,7 @@ public class Room {
 	 * 
 	 * @return The Level it is on
 	 */
-	public Level getLevel() {
+	public Advanced_Level getLevel() {
 		return Level;
 	}
 	
@@ -122,7 +122,7 @@ public class Room {
 	 * 
 	 * @param The Level
 	 */
-	public void setLevel(Level level) {
+	public void setLevel(Advanced_Level level) {
 		Level = level;
 	}
 	
