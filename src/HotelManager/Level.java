@@ -6,15 +6,18 @@ package HotelManager; // package declaration
  * has 2 attributes, LevelNumber and Number_of_Rooms. The Rooms have the 
  * attributes of a room number, guest name, and guest count. These are accessible
  * through this class. This is built to be the class to use to access the 
- * rooms as well.
+ * rooms as well. Mainly just a collection of getters and setters.
  * 
  * 
  * @author Cole
  */
 public class Level {
+	/* PRIVATE CLASS VARIBLES */
+	// Level Information
 	private int LevelNumber = -1;
 	private int Number_of_Rooms = 4;
 	
+	// Level Rooms
 	private Room room1;
 	private Room room2;
 	private Room room3;
@@ -147,94 +150,255 @@ public class Level {
 		}
 	}
 	
+	/**
+	 * Will reset room 1 and allow another guest to
+	 * check in
+	 * 
+	 * @category Guest Actions
+	 */
 	public void checkOutRoom1() {
 		room1.resetRoom();
 		System.out.println("Room 1 is now empty");
 	}
 	
+	/**
+	 * Will reset room 2 and allow another guest to
+	 * check in
+	 * 
+	 * @category Guest Actions
+	 */
 	public void checkOutRoom2() {
 		room2.resetRoom();
 		System.out.println("Room 2 is now empty");
 	}
 	
+	/**
+	 * Will reset room 3 and allow another guest to
+	 * check in
+	 * 
+	 * @category Guest Actions
+	 */
 	public void checkOutRoom3() {
 		room3.resetRoom();
 		System.out.println("Room3 is now empty");
 	}
 	
+	/**
+	 * Will reset room 4 and print that the room is empty.
+	 * This will allow another guest to check in
+	 * 
+	 * @category Guest Actions
+	 */
 	public void checkOutRoom4() {
 		room4.resetRoom();
 		System.out.println("Room 4 is now empty");
 	}
 	
+	/**
+	 * Will set the room 1 guest name
+	 * 
+	 * @param p_name - guest name
+	 * @category level setter/getter
+	 */
 	public void setRoom1GuestName(String p_name) {
 		room1.setGuestName(p_name);
 	}
+	
+	/**
+	 * Will get the room 1 guest name
+	 * 
+	 * @return room 1 guest name
+	 * @category level setter/getter
+	 */
 	public String getRoom1GuestName() {
 		return room1.getGuestName();
 	}
 	
+	/**
+	 * Will set the guest name of room 2
+	 * 
+	 * @param p_name - guest name
+	 * @category level setter/getter
+	 */
 	public void setRoom2GuestName(String p_name) {
 		room2.setGuestName(p_name);
 	}
+	
+	/**
+	 * Will get the room 2 guest name
+	 * 
+	 * @return guest name
+	 * @category level setter/getter
+	 */
 	public String getRoom2GuestName() {
 		return room2.getGuestName();
 	}
 	
+	/**
+	 * Will set the guest name of room 3
+	 * 
+	 * @param p_name - guest name
+	 * @category level setter/getter
+	 */
 	public void setRoom3GuestName(String p_name) {
 		room3.setGuestName(p_name);
 	}
+	
+	/**
+	 * Will get the guest name of room 3
+	 * 
+	 * @return guest name of room 3
+	 * @category level setter/getter
+	 */
 	public String getRoom3GuestName() {
 		return room3.getGuestName();
 	}
 	
+	/**
+	 * Will set the room 4 guest name
+	 * 
+	 * @param p_name - guest name
+	 * @category level setter/getter
+	 */
 	public void setRoom4GuestName(String p_name) {
 		room4.setGuestName(p_name);
 	}
+	
+	/**
+	 * Will get the room 4 guest name
+	 * 
+	 * @return guest name of room 4
+	 * @category level setter/getter
+	 */
 	public String getRoom4GuestName() {
 		return room4.getGuestName();
 	}
 	
+	/**
+	 * Will set the guest count of room 1
+	 * 
+	 * @param p_count - guest count
+	 */
 	public void setRoom1GuestCount(int p_count) {
 		room1.setGuestCount(p_count);
 	}
+	
+	/**
+	 * Will get the guest count of room 1
+	 * 
+	 * @return the guest count of room 1
+	 * @category level setter/getter
+	 */
 	public int getRoom1GuestCount() {
 		return room1.getGuestCount();
 	}
 	
+	/**
+	 * Will set the guest count of room 2
+	 * 
+	 * @param p_count - guest count
+	 * @category level setter/getter
+	 */
 	public void setRoom2GuestCount(int p_count) {
 		room2.setGuestCount(p_count);
 	}
+	
+	/**
+	 * Will get the guest count of room 2
+	 * 
+	 * @return guest count of room 2
+	 * @category level setter/getter
+	 */
 	public int getRoom2GuestCount() {
 		return room2.getGuestCount();
 	}
 	
+	/**
+	 * Will set the guest count of room 3
+	 * 
+	 * @param p_count - guest count
+	 * @category level setter/getter
+	 */
 	public void setRoom3GuestCount(int p_count) {
 		room3.setGuestCount(p_count);
 	}
+	
+	/**
+	 * Will get the guest count of room 3
+	 * 
+	 * @return guest count of room 3
+	 * @category level setter/getter
+	 */
 	public int getRoom3GuestCount() {
 		return room3.getGuestCount();
 	}
 	
+	/**
+	 * Will set the guest count of room 4
+	 * 
+	 * @param p_count - guest count
+	 * @category level setter/getter
+	 */
 	public void setRoom4GuestCount(int p_count) {
 		room4.setGuestCount(p_count);
 	}
+	
+	/**
+	 * Will get the guest count in room 4
+	 * 
+	 * @return guest count of room 4
+	 * @category level setter/getter
+	 */
 	public int getRoom4GuestCount() {
 		return room4.getGuestCount();
 	}
 	
+	/**
+	 * Will return if room 1 is full
+	 * 
+	 * @return if room 1 is full
+	 * @category level setter/getter
+	 */
 	public boolean isRoom1Full() {
 		return room1.isFull();
 	}
+	
+	/**
+	 * Will return if room 2 is full
+	 * 
+	 * @return room 2 full
+	 * @category level setter/getter
+	 */
 	public boolean isRoom2Full() {
 		return room2.isFull();
 	}
+	
+	/**
+	 * Will return if room 3 is full
+	 * 
+	 * @return room 3 full
+	 * @category level setter/getter
+	 */
 	public boolean isRoom3Full() {
 		return room3.isFull();
 	}
+	
+	/**
+	 * Will return if room 4 is full
+	 * 
+	 * @return room 4 state
+	 * @category level setter/getter
+	 */
 	public boolean isRoom4Full() {
 		return room4.isFull();
 	}
+	
+	/**
+	 * Will return if the level's rooms are full
+	 * 
+	 * @return is full
+	 * @category level setter/getter
+	 */
 	public boolean isFull() {
 		if(isRoom1Full() && isRoom2Full()) {
 			if(isRoom3Full() && isRoom4Full()) {
@@ -242,5 +406,41 @@ public class Level {
 			}
 		}
 		return false;
+	}
+	
+	/**
+	 * Will return the room 1 object
+	 * 
+	 * @return room1
+	 */
+	public Room getRoom1() {
+		return room1;
+	}
+	
+	/**
+	 * Will return the room 2 object
+	 * 
+	 * @return room2
+	 */
+	public Room getRoom2() {
+		return room2;
+	}
+	
+	/**
+	 * Will return the room 3 object
+	 * 
+	 * @return room3
+	 */
+	public Room getRoom3() {
+		return room3;
+	}
+	
+	/**
+	 * Will return the room 4 object
+	 * 
+	 * @return room4
+	 */
+	public Room getRoom4() {
+		return room4;
 	}
 }
