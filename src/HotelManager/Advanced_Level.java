@@ -34,10 +34,10 @@ public class Advanced_Level {
 		LevelNumber = p_LevelNumber;
 		Number_of_Rooms = 4;
 		
-		room1 = new Advanced_Room(this, 1);
-		room2 = new Advanced_Room(this, 2);
-		room3 = new Advanced_Room(this, 3);
-		room4 = new Advanced_Room(this, 4);
+		room1 = new Advanced_Room(this, 1, 2, false);
+		room2 = new Advanced_Room(this, 2, 2, false);
+		room3 = new Advanced_Room(this, 3, 3, true);
+		room4 = new Advanced_Room(this, 4, 1, false);
 		
 		room1.resetRoom();
 		room2.resetRoom();
@@ -55,6 +55,15 @@ public class Advanced_Level {
 	public void setLevelNumber(int p_LevelNumber) {
 		LevelNumber = p_LevelNumber;
 	}
+	
+	public void printQualities() {
+		System.out.println("==================== Level " + this.LevelNumber + " ====================");
+		System.out.println("- Has " + this.Number_of_Rooms + " Rooms");
+		for(int i_Counter = 0; i_Counter < this.Number_of_Rooms + 1; ++i_Counter) {
+			
+		}
+	}
+	
 	/**
 	 * Will get the level number
 	 * 

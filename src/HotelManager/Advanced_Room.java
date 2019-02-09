@@ -21,19 +21,53 @@ public class Advanced_Room {
 	private int GuestCount;
 	private String GuestName;
 	
+	// Room Qualities
+	private int Bed_Number;
+	private boolean isSuite;
+	
 	/**
 	 * This is the constructor of a room on a floor
 	 * 
 	 * @param p_Level
 	 * @param p_RoomNumber
 	 */
-	public Advanced_Room(Advanced_Level p_Level, int p_RoomNumber) {
+	public Advanced_Room(Advanced_Level p_Level, int p_RoomNumber, int p_Bed_Number, boolean p_isSuite) {
 		Level = p_Level;
 		RoomNumber = p_RoomNumber;
 		GuestCount = 0;
 		GuestName = "UNFILLED";
 		isEmpty = true;
 		isFull = false;
+		Bed_Number = p_Bed_Number;
+		isSuite = p_isSuite;
+	}
+	
+	public void printQualities() {
+		System.out.println("Room Number: " + this.RoomNumber);
+		System.out.println("Level Number: " + this.Level.getLevelNumber());
+		if(isEmpty) {
+			System.out.println("Currently Vacant");
+		}
+		else if(isFull) {
+			System.out.println("Currently Occupied");
+		}
+		
+		if(isSuite) {
+			System.out.println("A wonderful choice with all the amendities such as ");
+			System.out.println("--- A Mini Kitchen ---");
+			System.out.println("--- A Full Bathroom ---");
+			System.out.println("--- A flat screen TV ---");
+			System.out.println("--- A Fireplace ---");
+			System.out.println("--- A Private Deck");
+			System.out.println("--- Mini Office Space ---");
+			System.out.println("--- Mini Fridge ---");
+		}
+		else {
+			System.out.println("--- Mini Fridge ---");
+			System.out.println("--- TV ---");
+			System.out.println("--- Half-Bath ---");
+		}
+		System.out.println("Bed Count: " + this.Bed_Number);
 	}
 	
 	/**
@@ -201,5 +235,21 @@ public class Advanced_Room {
 			this.isFull = true;
 		}
 		this.GuestName = p_GuestName;
+	}
+
+	public int getBed_Number() {
+		return Bed_Number;
+	}
+
+	public void setBed_Number(int p_bed_Number) {
+		Bed_Number = p_bed_Number;
+	}
+
+	public boolean isSuite() {
+		return isSuite;
+	}
+
+	public void setSuite(boolean p_isSuite) {
+		this.isSuite = p_isSuite;
 	}
 }
